@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({
+    selector:'textarea',
+    height: 450,
+    plugins: "codesample image imagetools media link code fullscreen fullpage",
+    toolbar: "undo redo | styleselect | bold italic | codesample | image imagetools media link | code | fullscreen fullpage"
+
+  });
+});
